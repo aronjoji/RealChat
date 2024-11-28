@@ -14,17 +14,17 @@ const Login = () => {
 	};
 
 	return (
-		<div className='flex flex-col items-center justify-center min-w-96 mx-auto'>
-			<div className='w-full p-6 rounded-lg shadow-md bg-gray-400 bg-clip-padding backdrop-filter backdrop-blur-lg bg-opacity-0'>
-				<h1 className='text-3xl font-semibold text-center text-gray-300'>
+		<div className='flex flex-col items-center justify-center min-h-[100dvh] px-4'>
+			<div className='w-full max-w-md p-4 sm:p-6 rounded-lg shadow-md bg-gray-400 bg-clip-padding backdrop-filter backdrop-blur-lg bg-opacity-0'>
+				<h1 className='text-2xl sm:text-3xl font-semibold text-center text-gray-300 mb-4'>
 					Login
 					<span className='text-blue-500'> RealChat</span>
 				</h1>
 
-				<form onSubmit={handleSubmit}>
+				<form onSubmit={handleSubmit} className='space-y-4'>
 					<div>
 						<label className='label p-2'>
-							<span className='text-base label-text'>Username</span>
+							<span className='text-sm sm:text-base label-text'>Username</span>
 						</label>
 						<input
 							type='text'
@@ -37,7 +37,7 @@ const Login = () => {
 
 					<div>
 						<label className='label'>
-							<span className='text-base label-text'>Password</span>
+							<span className='text-sm sm:text-base label-text'>Password</span>
 						</label>
 						<input
 							type='password'
@@ -47,7 +47,7 @@ const Login = () => {
 							onChange={(e) => setPassword(e.target.value)}
 						/>
 					</div>
-					<Link to='/signup' className='text-sm  hover:underline hover:text-blue-600 mt-2 inline-block'>
+					<Link to='/signup' className='text-sm hover:underline hover:text-blue-600 mt-2 inline-block'>
 						{"Don't"} have an account?
 					</Link>
 
@@ -59,7 +59,7 @@ const Login = () => {
 				</form>
 			</div>
 			<footer className='mt-8 text-center'>
-				<a href="https://aronjoji.online/ "target='blank'  className='text-sm text-gray-300 hover:text-blue-500'>
+				<a href="https://aronjoji.online/" target='blank' className='text-sm text-gray-300 hover:text-blue-500'>
 					Made by Aron Joji
 				</a>
 			</footer>

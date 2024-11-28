@@ -9,13 +9,21 @@ import { useAuthContext } from "./context/AuthContext";
 function App() {
 	const { authUser } = useAuthContext();
 	return (
-		<div className='p-4 h-screen flex items-center justify-center'>
+		<div className='h-[100dvh] flex items-center justify-center'>
 			<Routes>
 				<Route path='/' element={authUser ? <Home /> : <Navigate to={"/login"} />} />
 				<Route path='/login' element={authUser ? <Navigate to='/' /> : <Login />} />
 				<Route path='/signup' element={authUser ? <Navigate to='/' /> : <SignUp />} />
 			</Routes>
-			<Toaster />
+			<Toaster 
+				position="top-center" 
+				reverseOrder={false}
+				containerStyle={{
+					top: '1rem',
+					right: '1rem',
+					fontSize: '14px'
+				}}
+			/>
 		</div>
 	);
 }
